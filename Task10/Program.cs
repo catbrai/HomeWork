@@ -5,18 +5,20 @@
 // 782 -> 8
 // 918 -> 1
 
-Console.Write("Введите целое  положительное трехзначное число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите целое положительное трехзначное число: "); //ввод данных
+int number = Convert.ToInt32(Console.ReadLine());                 //переменные
 
-if (number > 100 && number < 1000)
+int showSecondDigit = ShowSecondDigit(number);
+
+if (number > 100 && number < 1000)                               // условие
 {
-    int showSecondDigit = ShowSecondDigit(number);
     Console.WriteLine($"Вторая цифра числа {showSecondDigit}");
 }
 else
     Console.WriteLine("Некорректный ввод");
+    
 
-int ShowSecondDigit(int num)
+int ShowSecondDigit(int num)                                   // метод
 {
     int remainder = number % 100; // remainder - остаток
     return remainder / 10 ;
