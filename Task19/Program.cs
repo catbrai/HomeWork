@@ -10,9 +10,9 @@ Console.Write("Введите натуральное пятизначное чи
 int number = Convert.ToInt32(Console.ReadLine());
 bool palindrom = Palindrom(number);
 
-if (number >= 0 && number < 10000 || number > 99999 ) Console.Write("Вы ввели не пятизначное число.");
+if (number > 0 && number < 10000 || number > 99999 ) Console.Write("Вы ввели не пятизначное число.");
 
-else if (number < 0 ) Console.Write("Вы ввели не натуральное число.");
+else if (number <= 0 ) Console.Write("Вы ввели ненатуральное число.");
 
 else
    Console.WriteLine(palindrom ? "да, это палиндром." : "нет, это не палиндром.");
