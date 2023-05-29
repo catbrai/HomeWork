@@ -6,13 +6,12 @@
 // 12821 -> да
 // 23432 -> да
 
-Console.Write("Введите натуральное пятизначное число: ");
+
+Console.Write("Введите пятизначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 bool palindrom = Palindrom(number);
 
-if (number > 0 && number < 10000 || number > 99999 ) Console.Write("Вы ввели не пятизначное число.");
-
-else if (number <= 0 ) Console.Write("Вы ввели ненатуральное число.");
+if (number >= 0 && number < 10000 || number > 99999 ) Console.Write("Вы ввели не пятизначное число.");
 
 else
    Console.WriteLine(palindrom ? "да, это палиндром." : "нет, это не палиндром.");
@@ -26,7 +25,7 @@ bool Palindrom(int num)
     bool result = (firstNumber == lastNumber && secondNumber == fourNumber) ? true: false;
     return result;
 }        
-
+//======================================================= 1 variant
 // Console.Write("Введите пятизначное число: ");
 // int number = Convert.ToInt32(Console.ReadLine());
 
@@ -46,3 +45,5 @@ bool Palindrom(int num)
 //     else
 //         Console.WriteLine("Нет, это не палиндром");
 // }
+
+
