@@ -11,10 +11,11 @@ Console.Write("Введите пятизначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 bool palindrom = Palindrom(number);
 
-if (number >= 0 && number < 10000 || number > 99999 ) Console.Write("Вы ввели не пятизначное число.");
+if (number > -9999 && number < 10000 || number > 99999 || number < -99999)
+    Console.Write("Вы ввели не пятизначное число.");
 
 else
-   Console.WriteLine(palindrom ? "да, это палиндром." : "нет, это не палиндром.");
+    Console.WriteLine(palindrom ? "да, это палиндром." : "нет, это не палиндром.");
 
 bool Palindrom(int num)
 { 
