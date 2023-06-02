@@ -12,7 +12,7 @@ int dayOfWeek = DayOfWeek(number);
 
 if (number >= 1 && number <= 7) Console.WriteLine(dayOfWeek);
 else 
-if (number < 0 || number >= 8)  Console.Write("Некорректный ввод.");
+if (number <= 0 || number >= 8)  Console.Write("Это не день недели.");
 
 int DayOfWeek(int day)
 {
