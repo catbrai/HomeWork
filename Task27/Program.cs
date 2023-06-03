@@ -6,11 +6,11 @@
 // 82 -> 10
 // 9012 -> 12
 
-Console.Write("Введите число:");
+Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 int sumNumbers = SumDigit(number);
-Console.WriteLine($"Сумма цифр в числе {number} -> {sumNumbers}");
+Console.WriteLine($"Сумма цифр в числе '{number}' -> {sumNumbers}");
 
 int SumDigit(int num) // num = number
 {
@@ -25,7 +25,7 @@ int SumDigit(int num) // num = number
     while (num > 10)
     {
         int remainder1 = num / 10 % 10;
-        sum = sum + remainder1; // sum += remainder
+        sum = sum + remainder1; // sum += remainder1
         num /= 10;
     }
     sum = sum + remainder;
@@ -40,5 +40,5 @@ int SumDigit(int num) // num = number
 
 //  int remainder2 = number /10 % 10;
 //  int remainder3 = number /100 % 10;
-// Console.WriteLine ($"{remainder}, {remainder2}, {remainder3}");
+// Console.WriteLine ($"{remainder}, {remainder2} -> {remainder3}");
 
