@@ -4,24 +4,24 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-Console.WriteLine("Введите первое число: ");
+Console.Write("Введите первое число: ");
 int numberA = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Введите второе натуральное число: ");
+Console.Write("Введите второе натуральное число: ");
 int numberB = Convert.ToInt32(Console.ReadLine());
 
 
 int naturalDegree = NaturalDegree(numberA, numberB);
 if(numberB <= 0) Console.WriteLine("Вы ввели ненатуральное число.");
 else
-Console.WriteLine($"{numberA}, {numberB} -> {naturalDegree}");
+Console.WriteLine($" Число '{numberA}' в степени '{numberB}' -> {naturalDegree}");
 
 int NaturalDegree(double numA, double numB)
 {
     int result = 1;
     for (int i = 1; i <= numB; i++)
     {
-        result = (int)Math.Pow(numA, numB); //преобразование в (int) - неявное приведение типов
+        result = (int)Math.Pow(numA, numB); //преобразование в (int) - неявное приведение типов (из double в int)
     }
      return result;
 }
