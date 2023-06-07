@@ -15,16 +15,18 @@ void FillArray(int[] array)
 }
 void PrintArray(int[] array)
 {
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < array.Length ; i++)
     {
-          Console.Write(array[i] + " ");
-    } 
-}
+          if (i < array.Length - 1) Console.Write($"{array[i]}, ");
+          else Console.Write($"{array[i]}");
+    }
+   }
 
 int x = new Random().Next(1,7);
 int[] array1 = new int[x];
 FillArray(array1);
+Console.Write("[");
 PrintArray(array1);
-
+Console.Write("]");
 
 
