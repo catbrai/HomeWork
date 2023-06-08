@@ -48,6 +48,7 @@ return min1;
 double MaxMinDiff (double max1, double min1) 
 {
 double num = max1 - min1;
+num = Math.Round(num, 2); // округление результата до двух знаков после запятой
 return num;
 }
 
