@@ -27,9 +27,9 @@ void PrintArray(int[] arr)
 int SumOddPositionElements(int[] arr)
 {
     int sum = 0;
-    for (int i = 1; i < arr.Length; i++)
+    for (int i = 1; i < arr.Length; i+=2)
     {
-        if (i % 2 == 1) sum += arr[i];
+        sum += arr[i];
     }
     return sum;
 }
